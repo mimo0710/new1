@@ -1,0 +1,15 @@
+/* css重置开始 */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+a{
+    text-decoration: none;/*去掉登录下面的下滑写*/
+}
+img{
+    border: 0;
+}
+li{
+    list-style: none;
+}
+/* css重置结束 */

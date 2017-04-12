@@ -1,5 +1,22 @@
 #header{
-    background: url("makeup/img/1.jpg")no-repeat center center;
+    background: url("../img/banner.jpg")no-repeat center center;
     height: 600px;
 
+}
+#login, #header h1{
+    color: #fff;
+}
+#cart{
+    width: 200px;
+    height: 30px;
+    background: grey;
+    opacity: 0.5;/*透明度取值范围0-1*/
+    filter: alpha(opacity=50);/*ie下透明度取值范围0-100*/
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+#header img{
+    vertical-align: middle;
 }
