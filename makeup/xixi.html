@@ -7,14 +7,60 @@
         <link rel="stylesheet" href="css/index.css"/>
     </head>
     <body>
-        <div id="header">
-            <a href="http://www.baidu.com" id="login">登录</a>
-            <h1>我的小店</h1>
-            <div id="cart">
-                购物车：￥0.00（0件）
-                <img src="img/cart.png" alt="图片加载失败"/>
-            </div>
+    <div id="header">
+        <div class="wrapper">
+             <div id="main-header">
+                <div id="login" class="float">
+                    <a href="http://www.baidu.com"  target="_blank">登录</a>
+                </div>
+
+                <h1 class="float">我的小店</h1>
+
+                <div id="cart" class="float">
+                    购物车：￥0.00（0件）
+                    <img src="img/cart.png" alt="图片加载失败"/>
+                </div>
+
+             </div>
+            <ul id="nav">
+                <li class="selected"><a href="">首页</a></li>
+
+                <li class="makeup-shop">
+
+                    <a href="">美妆商城</a>
+                    <div class="submenu ">
+
+                    </div>
+
+                </li>
+
+                <li class="makeup-shop">
+                    <a href="">特卖商场</a>
+                    <div class="submenu">
+                    </div>
+                </li>
+
+                <li class="makeup-shop">
+                    <a href="">新品上市</a>
+                    <div class="submenu">
+                    </div>
+                </li>
+
+                <li class="makeup-shop">
+                    <a href="">潮人推荐</a>
+                    <div class="submenu">
+                    </div>
+                </li>
+
+                <li class="makeup-shop" >
+                    <a href="">进口免税店</a>
+                    <div class="submenu">
+                    </div>
+                </li>
+
+            </ul>
         </div>
+    </div>
         <div id="new-produt"></div>
         <div id="products"></div>
         <div id="problem"></div>
