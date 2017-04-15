@@ -1,22 +1,22 @@
-#header{
-    background: url("../img/banner.jpg")no-repeat center center;
-    height: 600px;
 
+/* css重置开始 */
+*{
+    margin: 0px;
+    padding: 0px;
 }
-#login, #header h1{
-    color: #fff;
+a{
+    text-decoration: none;/*去掉登录下面的下滑写*/
 }
-#cart{
-    width: 200px;
-    height: 30px;
-    background: grey;
-    opacity: 0.5;/*透明度取值范围0-1*/
-    filter: alpha(opacity=50);/*ie下透明度取值范围0-100*/
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 10px;
-    cursor: pointer;
+img{
+    border: 0;
 }
-#header img{
-    vertical-align: middle;
+li{
+    list-style: none;
+}
+/* css重置结束 */
+.wrapper{
+    width: 1140px;
+    height: 100%;
+    /*background: #cccccc;*/
+    margin: 0 auto;
 }
