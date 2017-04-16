@@ -1,3 +1,5 @@
+/*main-header 开始*/
+/*******************************************************************************************/
 #header{
     background: url("../img/banner.jpg")no-repeat center center;
     height: 600px;
@@ -38,11 +40,32 @@
 #main-header{
     height: 100px;
     line-height: 100px;
+    position: relative;
 }
 
 #login a:hover{
     text-decoration: underline;
 }
+#main-header p{
+    color: #ffffff;
+    position: absolute;
+    right: 70px;
+    top: 33px;
+    height: 30px;
+}
+/*******************************************************************************************/
+/*main-header 结束*/
+
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+
+/*nav begin*/
+/*******************************************************************************************/
 #nav li{
     float: left;
     width: 190px;
@@ -68,7 +91,6 @@
     width: 1140px;
     height: 300px;
     background: #ffffff;
-    margin-left: -190px;
     display: none;
 }
 
@@ -76,3 +98,118 @@
     display: block;
 
 }
+.submenu.one{
+    margin-left: -190px;
+}
+.submenu.two{
+    margin-left: -380px;
+}
+.submenu.three{
+    margin-left: -570px;
+}
+.submenu.four{
+    margin-left: -760px;
+}
+.submenu.five{
+    margin-left: -950px;
+}
+/*******************************************************************************************/
+/*nav over*/
+
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+
+/*new-product开始*/
+/*******************************************************************************************/
+#new-product{
+    margin-top: 56px;
+    height: 266px;
+}
+#new-product .sale{
+    background-repeat:  no-repeat;
+    width: 360px;
+    height: 210px;
+    float: left;
+    margin-right: 30px;
+}
+#new-product .bg1{
+    background-image: url(../img/bg1.jpg);
+}
+#new-product .bg2{
+    background-image: url(../img/bg2.jpg);
+}#new-product .bg3{
+     background-image: url(../img/bg3.jpg);
+     margin-right: 0;
+ }
+ #new-product h2{
+     color: #ffffff;
+     margin-top: 150px;
+     margin-left: 200px;
+     font-size: 200%;
+ }
+/*******************************************************************************************/
+/*new-product结束*/
+
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+/*1*/
+
+/*products开始*/
+/*******************************************************************************************/
+#product{
+    height: 1000px;
+}
+.products-info{
+    width: 340px;
+    height: 440px;
+    border: 1px solid #cccccc;
+    float: left;
+    margin-right: 30px;
+    margin-top: 30px;
+}
+
+.products-info img{
+    width: 248px;
+    height: 248px;
+    border: 1px solid #cccccc;
+    position: relative;
+}
+.new{
+    background: #fa558f;
+    color: #fff;
+    float: left;
+    position: absolute;
+}
+#products .products-detail{
+    margin-left: 20px;
+
+}
+#products .products-detail h3{
+    margin-top: 10px;
+}
+#products input{
+    width: 150px;
+    height: 30px;
+    text-indent: 10px;
+}
+#products button{
+    background: orange;
+    width: 150px;
+    height: 40px;
+    color: #ffffff;
+    font-size: 120%;
+    margin-top: 5px;
+    border: 0;
+}
+
+/*******************************************************************************************/
+/*products开始*/
