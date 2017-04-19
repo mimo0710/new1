@@ -152,6 +152,7 @@
      margin-left: 200px;
      font-size: 200%;
  }
+
 /*******************************************************************************************/
 /*new-product结束*/
 
@@ -213,3 +214,54 @@
 
 /*******************************************************************************************/
 /*products开始*/
+
+/*problem开始*/
+/*******************************************************************************************/
+#problem{
+    height: 400px;
+    background: url(../img/banner2.jpg) no-repeat center;
+    margin-top: 1000px;
+}
+#problem .wrapper{
+    width: 1000px;
+}
+.problem-menu{
+    padding-left: 40px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 100px;
+}
+.problem-menu li{
+    color: #ffffff;
+    list-style: disc;
+}
+.problem-menu li a{
+    color: #fff;
+}
+/*.problem-menu li a:hover{*/
+    /*text-decoration: underline;*/
+/*}*/
+.menu-bold{
+    font-weight: bolder;
+}
+
+/*******************************************************************************************/
+/*problem结束*/
+
+/*footer开始*/
+#footer{
+    background: hotpink;
+    height: 82px;
+    line-height: 82px;
+}
+#footer h3,#footer h4{
+    color: #ffffff;
+}
+#footer h3{
+    float: left;
+}
+#footer h4{
+    float: right;
+}
+
+/*footer结束*/
