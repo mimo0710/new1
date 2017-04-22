@@ -1,0 +1,114 @@
+/*main-header 开始*/
+/*******************************************************************************************/
+#header{
+    background: url("../img/banner33.jpg")no-repeat center center;
+    height: 600px;
+
+}
+#header a{
+    color: #ffffff;
+}
+#login, #header h1{
+    color: #fff;
+    width: 380px;
+}
+#cart.float{
+    width: 200px;
+    height: 30px;
+    background: grey;
+    opacity: 0.5;/*透明度取值范围0-1*/
+    filter: alpha(opacity=50);/*ie下透明度取值范围0-100*/
+    color: #ffffff;
+    text-align: center;/*文字居中*/
+    padding: 10px 10px;
+    cursor: pointer;/*光标 鼠标变成小手*/
+    margin-top: 25px;
+    line-height: 0;
+    float: left;
+}
+
+#header #cart.float{
+    float: right;
+}
+
+#header img{
+    vertical-align: middle;/*设置图片*/
+}
+#header .float{
+    float: left;
+}
+#header h1.float{
+    text-align: center;
+}
+#main-header{
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+}
+
+#login a:hover{
+    text-decoration: underline;
+}
+#main-header p{
+    color: #ffffff;
+    position: absolute;
+    right: 70px;
+    top: 33px;
+    height: 30px;
+}
+/*******************************************************************************************/
+/*main-header 结束*/
+
+
+
+
+/*nav begin*/
+/*******************************************************************************************/
+#nav li{
+    float: left;
+    width: 190px;
+    background: #fa558f;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+
+}
+#nav li:hover{
+    background: #3c3b3b;
+}
+#nav a{
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    display: block;
+}
+#nav .selected{
+    background: #3c3b3b;
+}
+.submenu{
+    width: 1140px;
+    height: 300px;
+    background: #ffffff;
+    display: none;
+}
+
+#nav .makeup-shop:hover .submenu{
+    display: block;
+
+}
+.submenu.one{
+    margin-left: -190px;
+}
+.submenu.two{
+    margin-left: -380px;
+}
+.submenu.three{
+    margin-left: -570px;
+}
+.submenu.four{
+    margin-left: -760px;
+}
+./*nav over*/submenu.five{
+    margin-left: -950px;
+}
+/*******************************************************************************************/

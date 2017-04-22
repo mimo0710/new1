@@ -5,6 +5,9 @@
     height: 600px;
 
 }
+#header a{
+    color: #ffffff;
+}
 #login, #header h1{
     color: #fff;
     width: 380px;
@@ -183,24 +186,42 @@
     height: 248px;
     border: 1px solid #cccccc;
     position: relative;
+    vertical-align: bottom;
 }
 .new{
     background: #fa558f;
     color: #fff;
-    float: left;
-    position: absolute;
+    float: right;
+    width: 52.7px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    /*position: inherit;*/
+}
+/*#products .products-detail{*/
+    /*margin-left: 20px;*/
+
+/*}*/
+#products h3{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 1.7em;
+}
+#products .h3{
+    font-weight: 400;
+    font-size: 1.4em
 }
 #products .products-detail{
-    margin-left: 20px;
+    background: #fcf9ff;
+    height: 192px;
 
-}
-#products .products-detail h3{
-    margin-top: 10px;
 }
 #products input{
     width: 150px;
     height: 30px;
     text-indent: 10px;
+    margin-left: 10px;
 }
 #products button{
     background: orange;
@@ -210,6 +231,7 @@
     font-size: 120%;
     margin-top: 5px;
     border: 0;
+    margin-left: 10px;
 }
 
 /*******************************************************************************************/
@@ -228,7 +250,7 @@
 .problem-menu{
     padding-left: 40px;
     float: left;
-    margin-right: 40px;
+    margin-right: 25px;
     margin-top: 100px;
 }
 .problem-menu li{
@@ -237,10 +259,11 @@
 }
 .problem-menu li a{
     color: #fff;
+    margin-left: 10px;
 }
-/*.problem-menu li a:hover{*/
-    /*text-decoration: underline;*/
-/*}*/
+.problem-menu li a:hover{
+    text-decoration: underline;
+}
 .menu-bold{
     font-weight: bolder;
 }
