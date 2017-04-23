@@ -22,3 +22,26 @@ li{
     /*background: #cccccc;*/
     margin: 0 auto;
 }
+#header{
+    background: url("../img/banner33.jpg")no-repeat center center;
+    height: 300px;
+
+}
+/*footer¿ªÊ¼*/
+#footer{
+    margin-top: 944px;
+    background: hotpink;
+    height: 82px;
+    line-height: 82px;
+}
+#footer h3,#footer h4{
+    color: #ffffff;
+}
+#footer h3{
+    float: left;
+}
+#footer h4{
+    float: right;
+}
+
+/*footer½áÊø*/

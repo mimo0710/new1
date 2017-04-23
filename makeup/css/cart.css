@@ -1,6 +1,3 @@
-/*main-header 开始*/
-/*******************************************************************************************/
-
 #header a{
     color: #ffffff;
 }
@@ -57,8 +54,6 @@
 /*main-header 结束*/
 
 
-
-
 /*nav begin*/
 /*******************************************************************************************/
 #nav li{
@@ -105,92 +100,61 @@
 .submenu.four{
     margin-left: -760px;
 }
-./*nav over*/submenu.five{
+.submenu.five{
     margin-left: -950px;
 }
 /*******************************************************************************************/
-#div a{
-    margin-right: 10px;
-}
-#div h3{
-    padding-top: 30px;
-    padding-bottom: 20px;
-    font-size: 26px;
-    font-weight: 600;
+/*nav over*/
 
-}
-#quality {
-    padding-top: 40px;
-    font-size: 26px;
-    font-weight: 600;
-    color: #282423;
-}
-/*products开始*/
-/*******************************************************************************************/
-#products-detial{
-    height: 1000px;
-}
-.products-info{
-    width: 340px;
-    height: 440px;
-    border: 1px solid #cccccc;
-    float: left;
-    margin-right: 30px;
+
+
+/*cart-detail开始*/
+#cart-detail #cart-left{
+    width: 855px;
+    height: 505px;
     margin-top: 30px;
 }
-
-.products-info img{
-    width: 248px;
-    height: 248px;
-    border: 1px solid #cccccc;
-    position: relative;
-    vertical-align: bottom;
+#cart-left  h2{
+    font-size: 1.5em;
+    margin-bottom: 1em;
 }
-.new{
-    background: #fa558f;
-    color: #fff;
+#cartcart{
+    width: 850px;
+    height: 204px;
+    margin-top: 30px;
+}
+#cart-detail .cosmetic{
+    width: 135px;
+    height: 135px;
+    float: left;
+}
+#cart-detail .close{
     float: right;
-    width: 52.7px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    /*position: inherit;*/
+    margin-right: 10px;
 }
-/*#products .products-detail{*/
-/*margin-left: 20px;*/
-
-/*}*/
-.products-detail h3{
+#cartcart h3{
+    padding-left: 150px;
     padding-top: 10px;
-    padding-left: 10px;
-    font-weight: 600;
-    font-size: 1.7em;
 }
-.products-detail .font{
-    font-weight: 400;
-    font-size: 1.4em
+#cartcart .price{
+    color: #000;
+    margin: 2em 0 0.5em;
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 3em;
+    padding-left: 18px;
 }
-#goods .products-detail{
-    background: #fcf9ff;
-    height: 190px;
+#cartcart p{
+    font-weight: bold;
 
 }
-.products-detail input{
-    width: 150px;
-    height: 30px;
-    text-indent: 10px;
-    margin-left: 10px;
+#border-bottom{
+    border-bottom: solid #000 1px;
 }
-.products-detail button{
-    background: orange;
-    width: 150px;
-    height: 40px;
-    color: #ffffff;
-    font-size: 120%;
-    margin-top: 5px;
-    border: 0;
-    margin-left: 10px;
+#cartcart .case{
+    width: 81px;
+    height: 34px;
 }
 
-/*******************************************************************************************/
-/*products开始*/
+
+/*cart-detail结束*/
