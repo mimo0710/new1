@@ -109,19 +109,30 @@
 
 
 /*cart-detail开始*/
+#cart-detail{
+    background: #eeeeee;
+    width: 1340px;
+    height: 820px;
+}
 #cart-detail #cart-left{
     width: 855px;
     height: 505px;
-    margin-top: 30px;
+    padding-top: 30px;
+}
+#cart-left{
+    border-right: solid #000 1px;
+    width: 75%;
+    float: left;
 }
 #cart-left  h2{
     font-size: 1.5em;
     margin-bottom: 1em;
 }
-#cartcart{
+.cartcart{
     width: 850px;
     height: 204px;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 #cart-detail .cosmetic{
     width: 135px;
@@ -132,29 +143,78 @@
     float: right;
     margin-right: 10px;
 }
-#cartcart h3{
-    padding-left: 150px;
+.cartcart h3{
     padding-top: 10px;
 }
-#cartcart .price{
+.pricecase{
+    padding-bottom: 20px;
+    border-bottom: solid #000 1px;
+}
+.cartcart .price{
     color: #000;
     margin: 2em 0 0.5em;
     font-weight: 500;
     display: inline-block;
     margin-right: 3em;
-    padding-left: 18px;
 }
-#cartcart p{
-    font-weight: bold;
+
+.border-bottom{
+    /*border-bottom: solid #000 1px;*/
+    padding-left: 170px;
 
 }
-#border-bottom{
-    border-bottom: solid #000 1px;
-}
-#cartcart .case{
+.cartcart .case{
     width: 81px;
     height: 34px;
 }
+.cartcart input[type="number"]{
+    width: 82px;
+    height: 34px;
+    text-indent: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+.cunponday{
+    margin-top: 15px;
+    margin-left: 170px;
+}
+.cunponday span{
+    font-size: 15px;
+    color: #a6acbe;
+}
+.cunpon{
+    float: left;
+    text-indent: 10px;
+}
+.day{
+    float: right;
+}
+#cart-right{
+    float: right;
+}
+
+
 
 
 /*cart-detail结束*/
+
+
+
+
+/*footer开始*/
+#footer{
+    background: hotpink;
+    height: 82px;
+    line-height: 82px;
+}
+#footer h3,#footer h4{
+    color: #ffffff;
+}
+#footer h3{
+    float: left;
+}
+#footer h4{
+    float: right;
+}
+
+/*footer结束*/
