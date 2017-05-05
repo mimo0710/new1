@@ -1,3 +1,6 @@
+/*main-header 开始*/
+/*******************************************************************************************/
+
 #header a{
     color: #ffffff;
 }
@@ -53,7 +56,6 @@
 /*******************************************************************************************/
 /*main-header 结束*/
 
-
 /*nav begin*/
 /*******************************************************************************************/
 #nav li{
@@ -108,131 +110,10 @@
 
 
 
-/*cart-detail开始*/
-#cart-detail{
-    background: #eeeeee;
-    width: 1340px;
-    height: 820px;
-}
-#cart-detail #cart-left{
-    width: 855px;
-    height: 505px;
-    padding-top: 30px;
-}
-#cart-left{
-    border-right: solid #000 1px;
-    width: 75%;
-    float: left;
-}
-#cart-left  h2{
-    font-size: 1.5em;
-    margin-bottom: 1em;
-}
-.cartcart{
-    width: 850px;
-    height: 204px;-
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-#cart-detail .cosmetic{
-    width: 135px;
-    height: 135px;
-    float: left;
-}
-#cart-detail .close{
-    float: right;
-    margin-right: 10px;
-}
-.cartcart h3{
-    padding-top: 10px;
-}
-.pricecase{
-    padding-bottom: 20px;
-    border-bottom: solid #000 1px;
-}
-.cartcart .price{
-    color: #000;
-    margin: 2em 0 0.5em;
-    font-weight: 500;
-    display: inline-block;
-    margin-right: 3em;
-}
-
-.border-bottom{
-    /*border-bottom: solid #000 1px;*/
-    padding-left: 170px;
-
-}
-.cartcart .case{
-    width: 81px;
-    height: 34px;
-}
-.cartcart input[type="number"]{
-    width: 82px;
-    height: 34px;
-    text-indent: 10px;
-    border-radius: 5px;
-    border: 1px solid #999;
-}
-.cunponday{
-    margin-top: 15px;
-    margin-left: 170px;
-}
-.cunponday span{
-    font-size: 15px;
-    color: #a6acbe;
-}
-.cunpon{
-    float: left;
-    text-indent: 10px;
-}
-.day{
-    float: right;
-}
-#cart-right{
-    float: right;
-}
-#cart-right .btn{
-    width: 140px;
-    height: 40px;
-    color: #ffffff;
-    border: 0;
-    font-size: 16px;
-    margin-top: 50px;
-    margin-right: 50px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-#cart-right  .goon{
-    background: orange;
-}
-#cart-right .des{
-    margin-bottom: 20px;
-    margin-right: 70px;
-}
-#cart-right .total{
-    margin-right: 70px;
-}
-#cart-right .gap{
-    margin-right: 80px;
-}
-#cart-right .total div{
-    border-top: 1px solid #000000;
-}
-#cart-right #submit.btn{
-    background: #000000;
-}
-
-
-
-/*cart-detail结束*/
-
-
-
 
 /*footer开始*/
 #footer{
+    margin-top: 944px;
     background: hotpink;
     height: 82px;
     line-height: 82px;
