@@ -109,11 +109,87 @@
 /*nav over*/
 
 
+/*enter开始*/
+#enter{
+    margin-top: 30px;
+    height: 350px;
+}
+#enter h2{
+    margin-bottom: 20px;
+}
+#enter form{
+    width: 570px;
+    height: 290px;
+    float: left;
+}
+#enter h5{
+    color: #5d5959;
+    font-size: 20px;
+}
+#enter label input{
+    width: 400px;
+    height: 38px;
+    margin-bottom: 25px;
+    text-indent: 10px;
+    font-size:20px;
+    outline: none;
+}
+#enter .btn[value="login"]{
+    width: 114px;
+    height: 41px;
+    background: #EF8743;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius:10px;
+    margin-bottom: 20px;
+    border: 0;
+}
+#enter .btn:hover{
+    background: #ffffff;
+    border-color: #000000;
+    color: #000000;
+    border: 1px solid;
+}
+#enter a#forget{
+    color: #5d5959;
+    text-decoration: underline;
+}
+#enter h3{
+    color: #EF8743;
+    margin-bottom: 20px;
+}
+#enter #noway p{
+    color: #5d5959;
+    margin-bottom: 20px;
+}
+#noway .btn{
+    width: 106px;
+    height: 42px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 1px solid #000000;
+    border-radius:10px;
+    display:block;
+}
+#noway a{
+    margin-left: 575px;
+    line-height: 42px;
+    text-align: center;
+}
+#noway .btn:hover{
+    background: #EF8743;
+    border-color: #EF8743;
+    color: #ffffff;
+}
+/*enter结束*/
+
+
 
 
 /*footer开始*/
 #footer{
-    margin-top: 944px;
+    /*margin-top: 600px;*/
     background: hotpink;
     height: 82px;
     line-height: 82px;
