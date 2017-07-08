@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<button id ="back">返回</button>
+<script>
+    var oBack = document.getElementById("back");
+    console.log(oBack);
+//    事件event
+//    事件三要素：事件源 事件处理函数 事件对象
+    oBack.onclick = function(){
+        history.back();
+    };
+
+
+</script>
+</body>
+</html>
