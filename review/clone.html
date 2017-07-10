@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--深克隆-->
+<script>
+    var o1 = {
+        name : "lisi"
+        age : 34
+        brother ={
+            name: "lisi"
+        }
+    }
+    function cloneObj(obj){
+        var newObj = {};
+        for(var p in obj){
+            if(typeof obj[p] ==="object"){
+                newObj[p] = cloneObj(obj[p]);
+            }else{
+                newObj[p] = obj[p];
+            }
+        }
+        return newObj;
+    }
+    var o2 = cloneObj(o1);
+    o2.brother.name = "wangwu";
+    console.log(o1.brother.name)
+</script>
+</body>
+</html>
