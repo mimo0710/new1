@@ -34,6 +34,22 @@
 //        var aLi = getByClass("aa");
 //        console.log(aLi);
         console.log(getByClass("aa"));
+
+        function $(selector,context){
+            context = context || document;
+            switch(selector.charAt(0)){  //检索第一个是#.还是其他；
+                case"#":
+                    return[document.getElementById(selector.substring(1))];     //比如#div进入这里得div
+                    break;
+                case".":
+                    return getByClass(selector.substring(1),context);
+                    break;
+                default:
+                    return context.getElementsByTagName(selector);
+                    break;
+            }
+        }
+        console.log($(#div,document));
     </script>
 </body>
 </html>
