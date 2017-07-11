@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--//封装获取所有当前元素的元素节点的方法-->
+<!--/**-->
+<!--*-->
+<!--* @param elem当前元素-->
+<!--* @returns {Array} 返回当前元素的元素节点-->
+<div id="div1">
+    <h1 id="h1">hahah</h1>
+    <p>heheh</p>
+</div>
+<script>
+    var oDiv1 = document.getElementById("div1");
+    var oH1 = document.getElementById("h1");
+
+    function siblings(elem){
+        var arr =[];
+        var others = elem.parentNode.children;
+        for(var i = 0;i<others.length;i++){
+            if(others[i] != elem){
+                arr.push(others[i]);
+            }
+        }
+        return arr;
+    }
+    console.log(siblings(oH1));
+
+</script>
+</body>
+</html>

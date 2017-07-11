@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>获取当前元素样式</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #00ffff;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+<script>
+    var oDiv = document.getElementById("div1");
+    /**获取当前元素样式
+     * @param elem
+     * @param attr
+     * @return {*}
+     */
+    function getStyle(elem,attr){
+        if(elem.currentStyle){
+            return elem.currentStyle[attr];
+        }else if(window.getComputedStyle){
+            return getComputedStyle(elem,false)[attr];
+        }else{
+            return elem.style.[attr];
+        }
+    }
+
+</script>
+</body>
+</html>

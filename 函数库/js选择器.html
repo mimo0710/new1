@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js选择器</title>
+</head>
+<body>
+    <ul id="ul1" class="aa">
+        <li >111</li>
+        <li class="aa">222</li>
+        <li class="aa">333</li>
+    </ul>
+
+    <script>
+        /**
+         * 查找符合className的元素 （解决ie不能用class选择器）
+         * @param className
+         * @param context
+         * @return 一个数组
+         */
+        function getByClass(className,context){
+            context = context || document;
+            var result = [];
+            var arr =context.getElementsByTagName("*");                                                                         //定义一个arr取context里所有的标签名
+            var reg = new RegExp("\\b"+className+"\\b");//不能用正则表达式直接量  /\bclassName\b/检索是className这几个字母     //定义一个正则表达式检索className
+            for(var i = 0;i < arr.length;i++){
+                if(reg.test(arr[i].className)){
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+//        var oUl = document.getElementById("ul1");
+//        var aLi = getByClass("aa");
+//        console.log(aLi);
+        console.log(getByClass("aa"));
+    </script>
+</body>
+</html>

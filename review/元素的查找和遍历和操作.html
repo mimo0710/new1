@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="div1">
+        <h1 id="h1">hahah</h1>
+        <p>heheh</p>
+    </div>
+<script>
+//    1.元素查找
+     document.getElementById("aa");
+     context.getElementsByTagName("li")
+     context.getElementsByClassName("li")
+     context.getElementsByName("bb")
+          document.querySelector() 查询一个对象
+          document.querySelectorAll()查询多个对象
+
+    对象有三种：内置对象 自定义对象 dom对象 （document object model）
+
+//   2. 元素遍历
+     var oDiv1 = document.getElementById("div1");
+    var oH1 = document.getElementById("h1")
+    console.log(oDiv.children);//子元素节点
+    console.log(oDiv1.parentNode);//父元素节点
+    console.log(oDiv.offsetParent);//找离他最近的已定位的祖先元素
+    console.log(oH1.nextElementSibling)//找下一个兄弟元素
+
+//    3.元素操纵
+    var oSpan = document.createElement("span");
+    oSpan.innerHTML = "xixi";
+    oDiv1.appendChild(oSpan);//往div里插入一个span
+    oDiv1.removeChild(oH1);//把div里的h1删掉
+    oDiv1.insertBefore(oSpan,oH1);//在h1前面插入一个span
+
+        //  删除给定元素
+        function remove(elem){
+            elem.parentNode.removeChild(elem);
+        }
+
+        // 在给定元素后面插入一个新元素
+    function after(elem,newNode){
+        if(elem.nextElementSibling){
+            elem.parentNode.insertBefore(newNode,elem.nextElementSibling);
+        }else{
+            elem.parentNode.appendChild(newNode);
+        }
+    }
+    after(oH1,oSpan)
+
+
+</script>
+</body>
+</html>

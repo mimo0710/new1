@@ -8,9 +8,9 @@
 <!--深克隆-->
 <script>
     var o1 = {
-        name : "lisi"
-        age : 34
-        brother ={
+        name : "lisi",
+        age : "34" ,
+        brother : {
             name: "lisi"
         }
     }
@@ -28,6 +28,8 @@
     var o2 = cloneObj(o1);
     o2.brother.name = "wangwu";
     console.log(o1.brother.name)
+
+
 </script>
 </body>
 </html>
