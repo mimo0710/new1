@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>函数调用</title>
+</head>
+<body>
+<script>
+    function aa(bb){
+        bb(function dd(ee){
+            ee()
+        })
+    }
+    aa(function bb(dd){
+        dd(function ee(){
+            alert('U are a pig')
+        })
+    })
+
+</script>
+</body>
+</html>
