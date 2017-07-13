@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1"></div>
+<script>
+    var oDiv = document.getElementById('div1');
+//    oDiv.style.width = '200px';
+//    oDiv.style.height = '200px';
+//    oDiv.style.background = '#f00';
+
+    /**
+     * 用js获取elem对象attr属性
+     * @param elem 对象
+     * @param attr 属性
+     * @returns {*}
+     */
+    function getStyle(elem, attr) {             //获取elem对象的attr属性
+        //能力检测
+        if(elem.currentStyle){//IE            elem.currentStyle是ie浏览器get获取属性方式
+            return elem.currentStyle[attr];
+        }else if(window.getComputedStyle){
+            return getComputedStyle(elem, false)[attr];  //false冒泡 true捕获
+        }else{
+            return elem.style[attr];
+        }
+    }
+    /**
+     * 用js给elem对象添加attr属性
+     * @param elem 对象                           eg：div标签
+     * @param attr 属性                           eg：width
+     * @param value 属性所对应的值                eg:200px
+     * @returns {*}
+     */
+    function css(elem, attr, value) {
+        if(value){//如果给value传了值
+            elem.style[attr] = value;  //不能直接.attr 因为attr不是属性名只是形参
+        }else{
+            if(typeof attr === 'string'){    //检查形参attr属性是不是一个字符串 如果是字符串进入if不是进入else
+                return getStyle(elem, attr);   //调用上一个封装好的getStyle函数
+            }else{          //不是的情况 attr为一个{ }
+                for(var p in attr){
+                    switch(p){
+                        case 'width':
+                        case 'height':
+                        case 'padding':
+                        case 'paddingLeft':
+                        case 'paddingRight':
+                        case 'paddingTop':
+                        case 'paddingBottom':  //RegExp 判断是否含有% 有：直接输出 无：并且非负数 输出数字后加一个px↓
+                            value = /\%/.test(attr[p])?attr[p]:Math.max(parseInt(attr[p]), 0) + 'px';
+                            break;
+                        case 'left':
+                        case 'top':
+                        case 'bottom':
+                        case 'right':
+                        case 'margin':
+                        case 'marginLeft':
+                        case 'marginRight':
+                        case 'marginTop':
+                        case 'marginBottom':
+                            value = /\%/.test(attr[p])?attr[p]:parseInt(attr[p]) + 'px';
+                            break;
+                        default:
+                            value = attr[p];
+                    }
+                    elem.style[p] = value;
+                }
+            }
+        }
+    }
+
+//    css(oDiv, {
+//        width: 400,
+//        height: '300px',
+//        background: '#00f'
+//    });
+
+    css(oDiv, 'width', '400px');
+    css(oDiv,"background","red");
+    css(oDiv,'height','20px')
+    console.log(css(oDiv,"width"));
+//    console.log(   css(oDiv, 'width')  );
+
+//console.log(css(oDiv, {
+//    width: 400,
+//    height: '300px',
+//    background: '#00f'
+//}))
+
+</script>
+</body>
+</html>

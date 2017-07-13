@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <h1 id="div1">123123</h1>
+    <p>123456</p>
+</div>
+<script>
+    var oH1= document.getElementById("div1");
+    function next(elem){
+    do{
+        elem = elem && elem.nextSibling;     //nextSibling 返回下个节点，在相同的树层级中。被返回的节点以 Node 对象返回。
+        //注释：如果没有 nextSibling 节点，则返回值为 null。
+    }while(elem && elem.nodeType != 1);     //nodeType 属性返回以数字值返回指定节点的节点类型。1元素节点2属性节点
+    return elem;
+}
+console.log(next(oH1));
+</script>
+</body>
+</html>
