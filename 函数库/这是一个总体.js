@@ -47,7 +47,7 @@ function getByClass(className,context){
  * @param attr
  * @return {*}
  */
-function getStle(elem, attr){
+function getStyle(elem, attr){
     if(elem.currentStyle){
         return elem.currentStyle[attr];
     }else if(elem.getComputedStyle){

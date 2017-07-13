@@ -2,10 +2,183 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <title>jQuery</title>
 </head>
+<body>
     <button id="btn">click</button>
-    <body>
-        0
-    </body>
+    <ul id="ul1">
+        <li>111</li>
+        <li class="aa">222</li>
+        <li class="aa">333</li>
+    </ul>
+    <ul id="ul2">
+        <li>1111</li>
+        <li class="bb">2222</li>
+        <li class="bb">3333</li>
+    </ul>
+    <div id="div1">
+        <h1 id="h1">haha</h1>
+        <p>hehe</p>
+    </div>
+    <script>
+        function getStyle(elem, attr){
+        if(elem.currentStyle){
+            return elem.currentStyle[attr];
+        }else if(elem.getComputedStyle){
+            return elem.getComputedStyle(elem, false)[attr];
+        }else{
+            return elem.style[attr];
+        }
+    }
+        function css(elem,attr,value){
+            if(value){
+                elem.style[attr] = value;
+            }else{
+                if(typeof attr ==="string"){
+                    return getStyle(elem,attr);
+                }else{
+                    for(var p in attr){
+                        switch(p){
+                            case 'width':
+                            case 'height':
+                            case 'padding':
+                            case 'paddingLeft':
+                            case 'paddingRight':
+                            case 'paddingTop':
+                            case 'paddingBottom':
+                                value = /\%/.test[attr[p]]?attr[p]:Math.max(parseInt(attr[p]),0)+'px';
+                                break;
+                            case 'left':
+                            case 'top':
+                            case 'bottom':
+                            case 'right':
+                            case 'margin':
+                            case 'marginLeft':
+                            case 'marginRight':
+                            case 'marginTop':
+                            case 'marginBottom':
+                                value = /\%/.test(attr[p])?attr[p]:parseInt(attr[p])+'px';
+                                break;
+                            default :
+                                value = attr[p];
+                        }
+                        elem.style[p] = value;
+                    }
+                }
+            }
+        }
+        function getStyle(elem, attr){
+            if(elem.currentStyle){
+                return elem.currentStyle[attr];
+            }else if(elem.getComputedStyle){
+                return elem.getComputedStyle(elem, false)[attr];
+            }else{
+                return elem.style[attr];
+            }
+        }
+        function getByClass(className,context){
+            context = context || document;
+            var result = [];
+            var arr =context.getElementsByTagName("*");
+            var reg = new RegExp("\\b"+className+"\\b");
+            for(var i = 0;i < arr.length;i++){
+                if(reg.test(arr[i].className)){
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+        function addEvent(elem, type,fn){
+            if(elem.addEventListener){
+                elem.addEventListener(type,fn,false)
+            }else if(elem.attachEvent){
+                elem[type+fn] = function(){
+                    fn.call(elem);
+                }
+                elem.attachEvent("on"+type,elem[type+fn]);
+            }else{
+                elem["on"+type] = fn;
+            }
+        }
+        function $(selector,context){
+            context = context || document;
+            switch(selector.charAt(0)){  //检索第一个是#.还是其他；
+                case"#":
+                    elements = [document.getElementById(selector.substring(1))];     //比如#div进入这里得div
+                    break;
+                case".":
+                    elements = getByClass(selector.substring(1),context);
+                    break;
+                default:
+                    elements = context.getElementsByTagName(selector);
+                    break;
+            }
+            return {
+                click: function(fn){
+                    for(var i=0;i<elements.length;i++){
+                        addEvent(elements[i],"click",fn);
+                    }
+                    return this;  //return后可支持链式操作
+                },
+                mouseover: function(fn) {
+                    for(var i=0;i<elements.length;i++){
+                        addEvent(elements[i],"mouseover",fn);
+                    }
+                },
+                mouseout: function(fn) {
+                    for(var i=0;i<elements.length;i++){
+                        addEvent(elements[i],"mouseout",fn)
+                    }
+                    return this;
+                },
+                css: function(attr,value) {
+                    for(var i=0;i<elements.length;i++){
+                        css(elements[i],attr,value)
+                    }
+                    return this;
+                },
+                next:function(){
+                    var elem = elements[0];
+                    do{
+                        elem = elem && elem.nextSibling;
+                    }while(elem && elem.nodeType !=1);
+                    return elem;
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
+        }
+
+        $(".bb").css({
+            width:200,
+            height:50,
+            background:"#00f"
+        });
+        $(".aa").mouseout(function(){
+            this.style.background = '#0f0';
+        }).mouseout(function(){
+            this.style.background = '#f00';
+        }).click(function () {
+            alert(this.innerHTML);
+        });
+
+        $("#btn").css('background','#fff');
+
+    </script>
+
+</body>
 </html>
