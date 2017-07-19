@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>cookie创建</title>
+</head>
+<body>
+<script src="jquery-1.11.2.js"></script>
+<script src="jquery.cookie.js"></script>
+<script>
+    $(function () {
+        $.cookie("username","wangwu",{expires:30});
+        $.cookie("username","lisi",{expires:30});
+        //会被覆盖
+
+        $.cookie("username","",{expires:-1});//移除cookie
+    });
+</script>
+</body>
+</html>

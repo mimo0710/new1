@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>cookie封装</title>
+</head>
+<body>
+
+
+<script>
+   $(function () {
+       addCookie("school","weichuang",7)
+
+       function addCookie(key,val,expires){
+           var str = key + "=" + val;
+           if(expires){
+               var date = new Date();
+               date.setDate(date.getDate()+expires);
+               str +=";expires:"+date.toUTCString();
+           }
+            document.cookie = str;
+       }
+
+
+
+   });
+</script>
+</body>
+</html>
