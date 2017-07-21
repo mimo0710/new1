@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>定位</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #left,#right{
+            width: 200px;
+            height: 200px;
+            background: lightpink;
+        }
+        #left{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #right{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        #center{
+            height: 200px;
+            background: hotpink;
+            position: relative;
+            margin-left: 210px;
+            margin-right: 210px;
+        }
+    </style>
+</head>
+<body>
+<div id="left"></div>
+<div id="center"></div>
+<div id="right"></div>
+</body>
+</html>

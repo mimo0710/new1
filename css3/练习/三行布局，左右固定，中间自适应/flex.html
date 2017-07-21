@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #left,#right{
+            width: 200px;
+            height: 200px;
+            background: lightpink;
+        }
+
+        #center{
+            height: 200px;
+            background: hotpink;
+            -webkit-flex-grow: 1;
+            -moz-flex-grow: 1;
+            -ms-flex-grow: 1;
+            o-oflex-grow: 1;
+            flex-grow: 1;
+        }
+        #main{
+            -webkit-display: flex;
+            -moz-display: flex;
+            -ms-display: flex;
+            -o-display: flex;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="left"></div>
+    <div id="center"></div>
+    <div id="right"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位解决</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #left{
+            width: 200px;
+            height: 200px;
+            background: lightpink;
+
+        }
+        #right{
+            background: hotpink;
+            height: 200px;
+            flex-grow: 1;
+            margin-left: 10px;
+        }
+        #container{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="left"></div>
+    <div id="right"></div>
+</div>
+
+</body>
+</html>

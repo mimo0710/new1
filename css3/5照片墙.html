@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>照片墙2张</title>
+    <style>
+        body{
+            background: #CCCCCC;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            width: 500px;
+            margin: 100px auto;
+            position: relative;
+        }
+        #container img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 10px solid #D49AE1;
+            -webkit-box-shadow: 5px 5px 5px rgba(100,100,100,0.5);
+            -moz-box-shadow: 5px 5px 5px rgba(100,100,100,0.5);
+            -ms-box-shadow: 5px 5px 5px rgba(100,100,100,0.5);
+            -o-box-shadow: 5px 5px 5px rgba(100,100,100,0.5);
+            box-shadow: 5px 5px 5px rgba(100,100,100,0.5);
+        }
+        #container img:first-child{
+            -webkit-transform:rotate(15deg);
+            -moz-transform:rotate(15deg);
+            -ms-transform:rotate(15deg);
+            -o-transform:rotate(15deg);
+            transform:rotate(15deg);
+        }
+        #container img:last-child{
+            -webkit-transform:rotate(-10deg);
+            -moz-transform:rotate(-10deg);
+            -ms-transform:rotate(-10deg);
+            -o-transform:rotate(-10deg);
+            transform:rotate(-10deg);
+        }
+        #container img:hover{
+            z-index: 1;
+            -webkit-box-shadow: 15px 15px 15px rgba(100,100,100,0.7);
+            -moz-box-shadow: 15px 15px 15px rgba(100,100,100,0.7);
+            -ms-box-shadow: 15px 15px 15px rgba(100,100,100,0.7);
+            -o-box-shadow: 15px 15px 15px rgba(100,100,100,0.7);
+            box-shadow: 15px 15px 15px rgba(100,100,100,0.7);
+
+            -webkit-transform:scale(1.2);
+            -moz-transform:scale(1.2);
+            -ms-transform:scale(1.2);
+            -o-transform:scale(1.2);
+            transform:scale(1.2);
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <img src="img/1.jpg" alt=""/>
+    <img src="img/2.jpg" alt=""/>
+</div>
+
+</body>
+</html>

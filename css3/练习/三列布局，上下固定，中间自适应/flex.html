@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body, html, #main{
+            height: 100%;
+        }
+        #top,#bottom{
+            width: 100%;
+            height: 200px;
+            background: lightpink;
+        }
+        #center{
+            background: hotpink;
+            flex-grow: 1;
+            overflow: scroll;//如果div里有内容 超出长度部分使用滚动条
+        }
+        #main{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+<div id="main">
+    <div id="top"></div>
+    <div id="center"></div>
+    <div id="bottom"></div>
+</div>
+
+</body>
+</html>

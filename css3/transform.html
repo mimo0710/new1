@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #div1{
+            transform: rotate(30deg);   //顺势针旋转度
+            transform-origin: 100px 50px;     //旋转中心
+
+
+            transform:translate(100px,50px);  //位移 右移100px 下移50px   translateX/translateY
+            transform:translate(-50%,-50%)   //宽高不知道的情况下 水平竖直居中需要
+
+
+            transform:scale(2);           //放大缩小 （如果为负值整个div旋转180度）
+            transform:scaleX(2);
+
+            transform: skew(45deg,30deg);   //拉伸 x倾斜45度 y倾斜30度
+
+            transform:matrix()//矩阵
+        }
+
+        #div2{
+            transition: width 2s linear 1s,background 2s linear; // 宽两秒匀速（延时1s）-背景颜色也两秒匀速变化
+
+        transition transition transition transition
+
+        }
+        #div2:hover{
+            width: 500px;、
+            background: #fa558f;
+        }
+
+        #div3{
+            width: 200px;
+            height: 200px;
+            background: #00ffff;
+            animation: xx 5s ease 1s forwards;     // 延时1秒后5秒完成动画停留在最后一帧
+             animation: xx 5s ease 1s infinite;  //无限次
+        }
+        @-webkit-keyframes xx {
+           0%{
+               width: 200px;
+           }
+            50%{
+                width: 400px;
+            }
+            100%{
+                width: 600px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div id="div1">transform</div>
+<div id="div2">transition</div>
+<div id="div3">animation</div>
+
+</body>
+</html>

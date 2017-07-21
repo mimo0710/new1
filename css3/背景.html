@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>背景</title>
+    <style>
+        #div1{
+            width: 300px;
+            height: 300px;
+            border: 20px solid #CCCCCC;
+            background-origin: border-box//从border开始显示 padding-box//从padding开始显示 content-box;//内容开始显示     //背景原点
+            background-clip:text;//按照文本剪裁 但是要把文本改成透明的                                                   //背景裁切
+
+             background-size:600px 400px;                                                                                 //背景大小
+            background-size: 50% 75%;//相对于div的宽高
+            background-size:contain/cover; // 背景图片在div里完全显示 div在背景图里完全显示
+            background://多背景 逗号分隔
+
+        }
+    </style>
+</head>
+<body>
+
+<div id="div1"></div>
+
+</body>
+</html>
