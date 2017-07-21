@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转立方体</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: lightpink;
+            perspective:1000px;
+            /*perspective-origin: 50% -500px;*/
+        }
+        #container{
+            width: 200px;
+            height: 200px;
+            position: relative;
+            margin:200px auto ;
+            transform-style: preserve-3d;
+            animation: run 2s linear infinite;
+        }
+        #container div{
+            width: 200px;
+            height: 200px;
+            background: rgba(255,100,255,0.6);
+            position: absolute;
+            text-align: center;
+            font-size: 80px;
+            line-height: 200px;
+            border: 1px solid #fff;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        #one{
+            -webkit-transform: rotateY(90deg) translateZ(100px);
+            -moz-transform: rotateY(90deg) translateZ(100px);
+            -ms-transform: rotateY(90deg) translateZ(100px);
+            -o-transform: rotateY(90deg) translateZ(100px);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        #six{
+            -webkit-transform: rotateY(-90deg) translateZ(100px);
+            -moz-transform: rotateY(-90deg) translateZ(100px);
+            -ms-transform: rotateY(-90deg) translateZ(100px);
+            -o-transform: rotateY(-90deg) translateZ(100px);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        #two{
+            -webkit-transform: rotateY(180deg) translateZ(100px);
+            -moz-transform: rotateY(180deg) translateZ(100px);
+            -ms-transform: rotateY(180deg) translateZ(100px);
+            -o-transform: rotateY(180deg) translateZ(100px);
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        #three{
+            -webkit-transform: rotateX(90deg) translateZ(100px);
+            -moz-transform: rotateX(90deg) translateZ(100px);
+            -ms-transform: rotateX(90deg) translateZ(100px);
+            -o-transform: rotateX(90deg) translateZ(100px);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        #four{
+            -webkit-transform: rotateX(-90deg) translateZ(100px);
+            -moz-transform: rotateX(-90deg) translateZ(100px);
+            -ms-transform: rotateX(-90deg) translateZ(100px);
+            -o-transform: rotateX(-90deg) translateZ(100px);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        #five{
+            -webkit-transform: translateZ(100px);
+            -moz-transform: translateZ(100px);
+            -ms-transform: translateZ(100px);
+            -o-transform: translateZ(100px);
+            transform: translateZ(100px);
+        }
+        @keyframes run {
+            from{
+
+            }
+            to{
+                -webkit-transform: rotateY(360deg);
+                -moz-transform: rotateY(360deg);
+                -ms-transform: rotateY(360deg);
+                -o-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="one">1</div>
+    <div id="two">2</div>
+    <div id="three">3</div>
+    <div id="four">4</div>
+    <div id="five">5</div>
+    <div id="six">6</div>
+</div>
+</body>
+</html>
