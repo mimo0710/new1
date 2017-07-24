@@ -36,7 +36,7 @@ $(function () {
     $(".promoted").append("<span class='hot'></span>")
 
    //µ÷ÕûÍ¼Æ¬²ã¼¶
-    var $imgs = $("#JS_imgWrap img");
+    var $imgs = $("#JS_imgWrap imgimgimg");
     $imgs.each(function (index,elem) {
        $(elem).css({
            zIndex:5-index

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旋转的照片墙</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            position: relative;
+        }
+        #container{
+            width: 100%;
+            height: 100%;
+            background-image: url(imgimgimg/bg.jpg);
+        }
+        #container .img{
+            width: 125px;
+            height: 125px;
+            position: absolute;
+            border: 5px solid #ffffff;
+            -webkit-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+            top: -500px;
+            left: -500px;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+        #container span{
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 1s ease;
+        }
+        #next,#prev{
+            width: 60px;
+            height: 60px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            margin-top: -30px;
+            display: none;
+            cursor: pointer;
+        }
+        #prev{
+            background-image: url(imgimgimg/prev.png);
+            left: 0;
+            border-radius: 0 10px 10px 0;
+        }
+        #next{
+            background-image: url(imgimgimg/next.png);
+            right: 0;
+            border-radius: 10px 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <div id="prev"></div>
+    <div id="next"></div>
+<script>
+    var ROW = 4, COL = 6, NUM = ROW * COL,
+            SMALL_WIDTH = 125,SMALL_HEIGHT = 125,
+            BIG_WIDTH = 750,BIG_HEIGHT = 500;
+    var count = 0;
+    var oContainer = document.getElementById("container");
+    var oPrev = document.getElementById("prev");
+    var oNext = document.getElementById("next");
+    var nowIndex = 1;
+    var aImg;
+
+    //图片预加载
+    for(var i = 0;i<24;i++){
+            var oSmallImg = new Image();
+            oSmallImg.onload = function () {
+                count++;
+                if (count == 24 * 2) {
+                    loadSuccess();
+                }
+            };
+            oSmallImg.src = "imgimgimg/thumbs/"+(i+1)+".jpg";
+            var oBigImg = new Image();
+            oBigImg.onload = function () {
+                count++;
+                if (count == 24 * 2) {
+                    loadSuccess();
+                }
+            };
+            oBigImg.src = "imgimgimg/"+ (i+1) +".jpg";
+    }
+
+
+
+
+    var index = 0;
+    var oImgWidth; //小图的宽
+    var oImgHeight; // 小图的高
+    var fColGap; // 列间距
+    var fRowGap; // 行间距
+
+
+    function loadSuccess(){
+        for(var i = 0;i<4;i++){
+            for(var j = 0;j<6;j++){
+                index++;
+                var oDiv = document.createElement("div");
+                oDiv.style.backgroundImage = "url(imgimgimg/thumbs/"+ index +".jpg)";
+                oDiv.className = "img";
+                oDiv.innerHTML = "<span></span>";
+                oDiv.pos = {
+                    col : j,
+                    row : i
+                };
+                oDiv.index = index;
+                oContainer.appendChild(oDiv);
+            }
+        }
+        //计算空隙大小
+        aImg = document.getElementsByClassName("img");//24个div
+        oImgWidth =aImg[0].offsetWidth;
+        oImgHeight =aImg[0].offsetHeight;
+        fColGap = (oContainer.offsetWidth -  oImgWidth*COL) / (COL + 1);//列间距
+        fRowGap = (oContainer.offsetHeight - oImgHeight * ROW) / (ROW + 1);//行间距
+        for(var i=23; i >= 0; i--){
+            aImg[i].style.transitionDelay = (24 - i) * 100 + "ms";
+            aImg[i].style.top = (fRowGap + oImgHeight) * aImg[i].pos.row + fRowGap + "px";
+            aImg[i].style.left = (fColGap + oImgWidth) * aImg[i].pos.col + fColGap + "px";
+            aImg[i].style.transform = "rotate("+ (Math.random() * 40 - 20) +"deg)";
+        }
+    }
+
+    var fBigRowGap = (oContainer.offsetWidth - BIG_WIDTH) / 2;//大图行间距
+    var fBigColGap = (oContainer.offsetHeight - BIG_HEIGHT) / 2;//大图列间距
+    var bFlag = true;
+    oContainer.onclick = function (e) {
+        if(this === e.target){
+            return false;
+        }
+        if(bFlag){
+            for(var i = 0;i<aImg.length;i++){
+                aImg[i].style.transitionDelay = "0ms";
+                aImg[i].style.top =  fBigRowGap + SMALL_HEIGHT * aImg[i].pos.row + "px";
+                aImg[i].style.left = fBigColGap + SMALL_WIDTH * aImg[i].pos.col + "px";
+                aImg[i].style.transform = "rotate(0deg)";
+                aImg[i].style.borderWidth = "1px";
+                var oSpan = aImg[i].getElementsByTagName("span")[0];
+                oSpan.style.opacity = 1;
+                var imgURL;
+                if(e.target.className == "img"){//div
+                    imgURL = e.target.index;
+                }else{//span
+                    imgURL = e.target.parentNode.index;
+                }
+                oSpan.style.backgroundImage = "url(imgimgimg/"+ imgURL +".jpg)";
+                oSpan.style.backgroundPosition = -SMALL_WIDTH * aImg[i].pos.col + "px "+ (-SMALL_HEIGHT * aImg[i].pos.row) +"px";
+                oSpan.style.transitionDelay = "0ms";
+
+                nowIndex = imgURL;// 取值1~24
+            }
+            oPrev.style.display = oNext.style.display = "block";
+        }else{
+            for(var i = 0;i<24;i++){
+                aImg[i].style.top = (fRowGap+oImgHeight)*aImg[i].pos.row+fRowGap+"px";
+                aImg[i].style.left = (fColGap+oImgWidth)*aImg[i].pos.col+fColGap+"px";
+                aImg[i].style.transform = "rotate("+ (Math.random() * 40 - 20) +"deg)";
+                aImg[i].style.borderWidth ="5px";
+                var oSpan = aImg[i].getElementsByTagName("span")[0];
+                oSpan.style.opacity = 0;
+                oSpan.style.transitionDelay = "0ms";
+            }
+            oPrev.style.display = oNext.style.display = "none";
+        }
+        bFlag = !bFlag;
+    };
+
+    oPrev.onclick =oNext.onclick = function () {
+      if(this === oNext ){
+          nowIndex++
+          if(nowIndex == 25){
+              nowIndex=1;
+          }
+      }else{
+          nowIndex--;
+          if(nowIndex == 0){
+              nowIndex =24;
+          }
+      }
+
+      var arr = [];
+        for(var i = 0;i<24;i++){
+            arr.push(i);
+        }
+        arr.sort(function (a,b) {
+            return Math.random()-0.5;
+        });
+        for(var i  = 0;i<arr.length;i++){
+            var oSpan = aImg[arr[i]].getElementsByTagName("span")[0];
+            oSpan.style.transitionDelay = (i+1)*50+"ms";
+            oSpan.style.backgroundImage = "url(imgimgimg/"+ nowIndex +".jpg)"
+        }
+    };
+
+</script>
+</body>
+</html>
