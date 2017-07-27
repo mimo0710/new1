@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>画板</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            background: lightpink;
+            position: relative;
+        }
+        #cvs{
+            background: white;
+            position: absolute;
+            top: 50px;
+            left: 85px;
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<!--eCharts   网页里作图-->
+
+<canvas id="cvs" width="1200px" height="500px"></canvas>
+<h1>这是一个画板</h1>
+<script>
+    //e.clintX 横坐标
+    //mouseup松开 mousemove移动 mousedown按下
+    window.onload = function () {
+        var oCvs = document.getElementById("cvs");
+        var ctx = oCvs.getContext("2d");
+        oCvs.onmousedown = function (e) {
+            ctx.beginPath();
+            ctx.moveTo(e.clientX-85, e.clientY-50);
+
+            oCvs.onmousemove = function (e) {
+                ctx.lineTo(e.clientX-85, e.clientY-50);
+                ctx.stroke();
+            };
+
+            oCvs.onmouseup = function (e) {
+                oCvs.onmousemove = null;
+            };
+        };
+
+
+    };
+</script>
+</body>
+</html>

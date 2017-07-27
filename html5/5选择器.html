@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选择器</title>
+</head>
+<body>
+<div id="div1" class="bb">
+    <div class="aa"></div>
+    <div class="aa"></div>
+</div>
+
+    <script>
+         var oDiv = document.querySelector("#div1 .aa"); //查询第一个
+         var aDiv = document.querySelectorAll("#div1 .aa"); //查询全部
+
+        oDiv.className //返回一个字符串 string
+        oDiv.className += " cc"
+
+        oDiv.classList //返回数组 obj
+        oDiv.classList.add("cc")//remove、toggle有了去掉 没有加上
+
+
+
+
+    </script>
+</body>
+</html>

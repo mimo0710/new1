@@ -1,0 +1,40 @@
+官网requirejs.org
+
+模块开发、文件的预先加载
+
+
+原理：1.动态插入js    使用标签creatElement创建script标签
+      2.defer async   script全部完成再执行  script完成哪个执行哪个
+      3.AMD    requirejs提出 异步模块定义   依赖前置
+        CMD    seajs提出  通用模块定义      依赖就近
+
+<script src="require.js" data-main = "test(.js)"></script> 引入
+
+//        js加载    js单线程 浏览器多线程
+//        在head里引入 script 里面加一个defer 异步加载
+//                                    async 异步加载  不能保证加载顺序 详细见图
+
+判断数组：
+    [1,2,3].constructor == Array
+    arr instanceof Array
+
+数组排序： 升序
+arr.sort(function(a,b){
+    return a-b;
+})
+
+        require(["a"],function(){     //入口文件AMD
+
+        })
+
+        /*require上  不同之处  seajs下*/       require先声明先加载  seajs用到再声明再加载as lazy as possible
+
+        define(function(require){
+
+            var a  = require("a");
+        })
+
+
+定义模块  define([],function(){
+
+          });

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>自定义数据</title>
+</head>
+<body>
+//data-开头
+    <div id="div1" date-aa = "aa"></div>
+
+
+    <script>
+        var oDiv1 = document.getElementById("div1");
+        oDiv1.aa = "123";//jq prop()
+        console.log(oDiv1.aa);
+
+        oDiv1.setAttribute("bb","234");//jq attr()
+        console.log(oDiv1.getAttribute("bb"));
+
+        console.log($("#div1").date("aa"));
+
+
+
+//        html5
+//                                      键值对 key value
+        console.log(oDiv1.dataset.aa);
+
+
+
+
+
+//        js加载    js单线程 浏览器多线程
+//        在head里引入 script 里面加一个defer 异步加载
+//                                    async 异步加载  不能保证加载顺序 详细见图
+
+
+    </script>
+
+
+
+</body>
+</html>

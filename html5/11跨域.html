@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>跨域</title>
+</head>
+<body>
+//     跨域：同源策略     src属性没有跨域问题
+//     跨域四种方式：
+//                    www.a.com / www.b.com 域名不同
+//                    www.qq.com /  news.qq.com  主域和子域
+//                    http://192.168.1.100:80 / http://192.168.1.100:8080  端口号不同
+//                    http://192.168.1.100 / https://192.168.1.100  http协议不同
+
+
+// http://www.a.com/index1.html     http://www.a.com/index1.html 不属于跨域
+
+//   解决办法            1.jsonp: JSON padding  (callback)   原理src:?key=value
+                         2.iframe: 内联框架  （不推荐使用 使dom结构变得复杂）
+                         3.服务器代理方式   （后端不存在跨域问题）
+                         4.postMessage  （html5）
+<iframe  id="iframe" src="http://www.b.com/index2.html" frameborder="0"></iframe>
+    <script>
+//        $.get("http://www.b.com/index.html",{
+//            name:"zhangsan"
+//        })
+        var oIframe = document.getElementById("iframe");
+        xxxxx.postMessage("xxx","http://www.b.com")//发送
+        window.onMessage = function (e) {} //接受
+
+
+    </script>
+
+</body>
+</html>

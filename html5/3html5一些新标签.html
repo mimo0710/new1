@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新标签</title>
+</head>
+<body>
+//htmlshiv.js   解决ie9以下版本浏览器对html5新增标签的不识别
+    <form action="提交到某个属性里" id="register">
+
+        <label for="username">用户名</label>
+        <input type="text" id="username"/>  //有id输入后有提示 无id的时候输入没提示 提示关闭autocomplete = "off"加在后面 其默认值为on
+                                             //autofocus自动焦点 直接输入不需要点一下再输入 加在后面
+                                            //placeholder = "请输入用户名"
+                                            //
+        <br/>
+        <select name="" id="">
+            <option value="">黑大</option>
+            <option value="">农大</option>
+            <option value="">林大</option>
+            <option value="">理工</option>
+        </select>
+        性别：
+        <input type="radio" name="sex"/>男
+        <input type="radio" name="sex"/>女
+        //爱好 type = "checkbox"
+        <input type="submit"/> //提交
+        <input type="reset"/> //重置
+
+
+
+
+        <!--html5新标签-->
+        邮件：<input type="email"/>
+        <br/>
+        url：<input type="url"/>
+        <br/>
+        number：<input type="number"/>
+        <br/>
+        range：<input type="range"/>
+        <br/>
+        日期：
+        <input type="date"/>//兼容性问题
+        <input type="datetime"/>//兼容性问题
+        <br/>
+        search：<input type="search"/> //比常见的框多一个叉 兼容性问题
+        <br/>
+        color：<input type="color"/>//调色盘
+
+    </form>
+
+    <input type="text" form="register"/> //form外部提交
+
+
+</body>
+</html>

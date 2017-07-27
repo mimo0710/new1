@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+//   http://json.org     json2下载下来 引入就能兼容     xml类似json
+
+//在线JSON校验 www.bejson.com
+
+    <!--
+    json： javascript object对象 notation标记
+
+    js对象标记 轻量级的数据交换  本质是一个字符串string
+    -->
+
+    JSON.stringify() obj =》string
+    JSON.parse()  string =》obj
+
+
+//跟clone一样
+
+
+<script>
+    eval("aletr(1);");
+    eval("while(true){alert(1);}");//不安全
+    JSON.parse(alert(1))
+
+
+
+
+
+    //深拷贝： json 、clone
+    var str = JSON.stringify(obj1);
+    var obj = JSON.parse(str);
+
+    /**
+     * 深克隆
+     * @param obj
+     * @returns {{}}
+     */
+    function cloneObj(obj){
+        var newObj = {};
+        for(var p in obj){
+            if(typeof obj[p] === "object"){
+                0
+                newObj[p] = arguments.callee(obj[p]);
+            }else{
+                newObj[p]=obj[p]
+            }
+        }
+        return newObj;
+    }
+</script>
+
+
+
+<!--xml格式：-->
+<user>
+    <username>zhangsan</username>
+    <age>18</age>
+    <school>linda</school>
+</user>
+
+</body>
+</html>

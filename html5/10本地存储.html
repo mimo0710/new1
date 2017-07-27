@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+//于cookie差别 cookie=4K 这两个=5M   有的浏览器cookie只能存储20条 多的会被覆盖
+    <script>
+        //添加
+        localStorage.username = "zhangsan";   //生命周期永远 没有时间限制
+        localStorage.setItem("age",18);
+        console.log(localStorage.username);
+        console.log(localStorage.getItem("age"));
+        //移除
+        localStorage.removeItem("age");
+        //清除
+        localStorage.clear();
+
+
+
+        sessionStorage.name = "zhangsan"; //生命周期  浏览器关闭就没了
+        sessionStorage.age = 18;                                      //使用方法同上
+        //session会话 保存在服务端
+    </script>
+</body>
+</html>
