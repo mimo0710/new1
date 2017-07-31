@@ -1,0 +1,116 @@
+#banner{
+    width: 100%;
+    height: 470px;
+    background: #31333e;
+    position: relative;
+}
+#computer{
+    position: relative;
+}
+#text{
+    position: absolute;
+    font-size: 36px;
+    color: #FFFFFF;
+    display: block;
+    height: 42px;
+    top: 46px;
+    z-index: 5;
+    left: 300px;
+}
+#text-button button{
+    width: 180px;
+    height: 50px;
+    background: #00aeff;
+    border: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 25px;
+    float: right;
+    position: absolute;
+    top: 46px;
+    right: 150px;
+    cursor: pointer;
+}
+#computer span{
+    background: url("../img/computer.jpg")no-repeat;
+    display: block;
+    width: 573px;
+    height: 346px;
+    position: absolute;
+    top: 114px;
+    left:400px;
+}
+#computer-left{
+    position: absolute;
+    background: url("../img/left.jpg") no-repeat;
+    z-index: 100;
+    width: 30px;
+    height: 52px;
+    left: 140px;
+    top: 204px;
+}
+#computer-right{
+    position: absolute;
+    background: url("../img/right.jpg") no-repeat;
+    z-index: 100;
+    width: 30px;
+    height: 52px;
+    top: 204px;
+    right: 140px;
+}
+
+
+
+
+
+
+#news {
+    width: 100%;
+    height: 492px;
+    position: relative;
+}
+#news .wrapper{
+    height: 492px;
+    width: 1002px;
+}
+
+#news-left{
+    position: absolute;
+    float: left;
+    display: block;
+    width: 334px;
+    height: 492px;
+}
+#news-center{
+    position: absolute;
+    float: left;
+    display: block;
+    width: 334px;
+    height: 492px;
+    left: 474px;
+}
+#news-right{
+    position: absolute;
+    float: left;
+    display: block;
+    width: 334px;
+    height: 492px;
+    left: 808px;
+}
+#news p{
+    width: 280px;
+    word-wrap:break-word;
+    text-align: center;
+}
+
+
+#new h3{
+    display: block;
+    position: absolute;
+    top: 88px;
+    color: #626262;
+    left: 90px;
+    text-align: center;
+}
